@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #020529; /* Fondo oscuro consistente */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff; /* Recuadro blanco consistente */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    width: 90%;
+    max-width: 800px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch; /* Para que los elementos internos se estiren */
+}
+
+#foro-cabecera {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#foro-cabecera h1 {
+    color: #212121;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#foro-cabecera p {
+    color: #757575;
+    font-size: 0.9em;
+}
+
+#lista-mensajes h2 {
+    color: #212121;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.mensaje {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.mensaje .autor {
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.mensaje .fecha {
+    color: #757575;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.mensaje .contenido {
+    font-size: 1em;
+    color: #212121;
+}
+
+#enviar-mensaje h2 {
+    color: #212121;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#formulario-mensaje textarea {
+    width: calc(100% - 22px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 10px;
+    min-height: 100px;
+}
+
+#formulario-mensaje button[type="submit"] {
+    background-color: #4caf50; /* Verde para enviar */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+#formulario-mensaje button[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+#regresar-foro-virtual {
+    background-color: #1976d2; /* Botón azul principal */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    align-self: center; /* Centrar el botón de regresar */
+}
+
+#regresar-foro-virtual:hover {
+    background-color: #1565c0;
+}

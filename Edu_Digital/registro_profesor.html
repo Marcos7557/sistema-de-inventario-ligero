@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Maestro</title>
+    <link rel="stylesheet" href="registro_profesor.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Registro de Maestro</h1>
+        <form class="registration-form" id="registration-form">
+            <div class="form-group">
+                <label for="nombre-maestro">Nombre:</label>
+                <input type="text" id="nombre-maestro" name="nombre-maestro" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellido-maestro">Apellido:</label>
+                <input type="text" id="apellido-maestro" name="apellido-maestro" placeholder="Ingresa tu apellido">
+            </div>
+            <div class="form-group">
+                <label for="email-maestro">Correo Electrónico:</label>
+                <input type="email" id="email-maestro" name="email-maestro" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="password-maestro">Contraseña:</label>
+                <input type="password" id="password-maestro" name="password-maestro" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="form-group">
+                <label for="telefono-maestro">Número de Teléfono:</label>
+                <input type="tel" id="telefono-maestro" name="telefono-maestro" placeholder="Ingresa tu número de teléfono">
+            </div>
+            <div class="form-group">
+                <label for="institucion-maestro">Institución Educativa:</label>
+                <input type="text" id="institucion-maestro" name="institucion-maestro" placeholder="Ingresa el nombre de tu institución">
+            </div>
+            <button type="submit">Registrarse como Maestro</button>
+            <p class="login-link">¿Ya tienes una cuenta? <a href="index.html" id="iniciar-sesion-link">Iniciar Sesión</a></p>
+        </form>
+    </div>
+    <script type="module" src="registro_profesor.js"></script>
+</body>
+</html>

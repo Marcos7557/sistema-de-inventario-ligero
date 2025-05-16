@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alumnos Registrados</title>
+    <link rel="stylesheet" href="lista_alumnos.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Lista de Alumnos Registrados</h1>
+            <div>
+                <a href="#" id="mostrar-registro-alumno-btn-lista" class="registrar-btn">Registrar Nuevo Alumno</a>
+                <a href="maestro.html" id="volver-panel" class="volver-btn">Volver al Panel</a>
+                <button id="imprimir-lista-btn" class="imprimir-btn">Imprimir Lista</button>
+            </div>
+        </header>
+        <main>
+            <section class="registro-alumnos" id="registro-alumnos-container-lista">
+                <h2>Registrar Nuevo Alumno</h2>
+                <form class="registro-alumno-form" id="registro-alumno-form-lista">
+                    <div class="form-group">
+                        <label for="nombre-alumno">Nombre del Alumno:</label>
+                        <input type="text" id="nombre-alumno" name="nombre-alumno" placeholder="Nombre del alumno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido-alumno">Apellido del Alumno:</label>
+                        <input type="text" id="apellido-alumno" name="apellido-alumno" placeholder="Apellido del alumno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre-responsable">Nombre del Responsable:</label>
+                        <input type="text" id="nombre-responsable" name="nombre-responsable" placeholder="Nombre del padre, madre o tutor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parentesco-responsable">Parentesco:</label>
+                        <input type="text" id="parentesco-responsable" name="parentesco-responsable" placeholder="Parentesco (Padre, Madre, Tutor, etc.)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono-responsable">Número de Teléfono del Responsable:</label>
+                        <input type="tel" id="telefono-responsable" name="telefono-responsable" placeholder="Número de teléfono del responsable" required>
+                    </div>
+                    <button type="submit">Registrar Alumno</button>
+                </form>
+            </section>
+
+            <section class="lista-alumnos-detallada">
+                <h2>Detalle de Alumnos Registrados</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Responsable</th>
+                            <th>Parentesco</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alumnos-table-body">
+                        <tr><td colspan="5">Cargando lista de alumnos...</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="lista_alumnos.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Asegúrate de tener esta fuente o una similar */
+    background-color: #020529; /* Un azul oscuro como fondo (ajusta según tu preferencia) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff; /* Texto blanco para contrastar con el fondo oscuro */
+}
+
+.container {
+    background-color: #f9fbe7; /* Un amarillo muy claro para el recuadro */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para elevación */
+    text-align: center;
+    width: 400px; /* Ajusta el ancho según sea necesario */
+}
+
+h1 {
+    color: #311b92; /* Un morado oscuro para el título */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+#user-info {
+    color: #5e35b1; /* Un morado más claro para la info del usuario */
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+a {
+    display: block;
+    padding: 12px 20px;
+    background-color: #e0f2f7; /* Un celeste muy claro para los enlaces */
+    color: #0277bd; /* Un azul más oscuro para el texto del enlace */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #b2ebf2; /* Un celeste ligeramente más oscuro al pasar el mouse */
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #ef5350; /* Un rojo suave para el botón de cerrar sesión */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%; /* O ajusta el ancho según necesites */
+}
+
+button:hover {
+    background-color: #d32f2f; /* Un rojo más oscuro al pasar el mouse */
+}

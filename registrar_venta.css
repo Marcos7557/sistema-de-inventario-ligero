@@ -1,0 +1,74 @@
+/* registrar_venta.css */
+
+.sale-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.sale-item .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sale-item .item-total {
+    font-weight: bold;
+    text-align: right;
+}
+
+#add-item-button {
+    margin-top: 15px;
+}
+
+.total-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.total-section .total-label {
+    margin-right: 10px;
+}
+
+#total-amount {
+    font-size: 1.5em;
+    color: green;
+}
+
+/* Estilos para el mensaje de alerta */
+.mensaje-alerta {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e0f7da; /* Verde claro */
+    color: #1b5e20; /* Verde oscuro para el texto */
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border: 1px solid #b9f6ca; /* Borde sutil verde claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.mensaje-alerta.mensaje-error {
+    background-color: #ffebee; /* Rojo claro para errores */
+    color: #b71c1c; /* Rojo oscuro para el texto de error */
+    border: 1px solid #ef9a9a; /* Borde sutil rojo claro */
+}
+
+.mensaje-alerta.mensaje-warning {
+    background-color: #fffde7; /* Amarillo claro para advertencias */
+    color: #f9a825; /* Amarillo oscuro para el texto de advertencia */
+    border: 1px solid #fff9c4; /* Borde sutil amarillo claro */
+}
+
+.mensaje-alerta.mostrar {
+    opacity: 1;
+}

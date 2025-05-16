@@ -1,0 +1,221 @@
+/* Estilos para la tabla del historial de ventas (sin cambios) */
+.sales-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.sales-history-table th, .sales-history-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.sales-history-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.sales-history-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.sales-history-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hora-venta {
+    display: none;
+    color: #777;
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.fecha-venta:hover .hora-venta {
+    display: inline;
+}
+
+/* Estilos para el contenedor del total de ventas (sin cambios) */
+.total-ventas-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: right;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.total-ventas {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Estilos para el contenedor de la sección de filtros */
+.filters-container {
+    width: 100%; /* Ocupar el mismo ancho que la tabla */
+    margin-bottom: 10px; /* Espacio entre filtros y tabla */
+    box-sizing: border-box;
+    /* max-width: 100%; Eliminado aquí para que la media query controle el ancho en pantallas grandes */
+}
+
+/* Aplicar un ancho máximo en pantallas más grandes (ejemplo: 601px en adelante) */
+@media (min-width: 601px) {
+    .filters-container {
+        max-width: 400px; /* AJUSTA ESTE VALOR AL ANCHO DEL HISTORIAL EN TU COMPUTADORA */
+        margin-left: auto; /* Centrar horizontalmente en pantallas grandes si es necesario */
+        margin-right: auto; /* Centrar horizontalmente en pantallas grandes si es necesario */
+    }
+}
+
+/* Estilos específicos para la sección de filtros */
+.filters-section {
+    background-color: #f9f9f9;
+    padding: 5px 10px; /* Reducir el padding vertical aún más */
+    border-radius: 5px;
+    border: 1px solid #eee;
+    width: 100%; /* Asegurarse de que ocupe el ancho de su contenedor */
+    display: flex; /* Usar flexbox para organizar los controles en línea */
+    flex-direction: row; /* Alinear los controles horizontalmente */
+    align-items: center; /* Centrar verticalmente los controles */
+    justify-content: flex-start; /* Distribuir el espacio entre los controles */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    min-height: 40px; /* Establecer una altura mínima para la sección */
+}
+
+.filters-section h3 {
+    display: none; /* Ocultar el título */
+}
+
+.filters-section .filter-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que los controles pasen a la siguiente línea en pantallas pequeñas */
+    width: 100%; /* Ocupar todo el ancho disponible dentro de la sección */
+    justify-content: flex-start; /* Distribuir el espacio entre los grupos de filtros */
+    margin: 5px 0; /* Añadir un pequeño margen vertical dentro del contenedor de controles */
+}
+
+.filters-section .date-filter,
+.filters-section .product-filter {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 0; /* Eliminar margen inferior */
+}
+
+.filters-section .date-filter label,
+.filters-section .product-filter label {
+    font-weight: bold;
+    color: #555;
+    min-width: auto;
+    font-size: 0.8em; /* Reducir un poco más el tamaño de la fuente */
+    margin-right: 2px; /* Añadir un pequeño margen a la derecha de la etiqueta */
+}
+
+.filters-section .date-filter select,
+.filters-section .product-filter select {
+    padding: 4px; /* Reducir el padding de los selectores */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.8em; /* Reducir un poco más el tamaño de la fuente */
+    max-width: 100px; /* Ajustar el ancho máximo de los selectores */
+    box-sizing: border-box;
+}
+
+.filters-section .product-filter select {
+    max-width: 120px; /* Ancho un poco mayor para el filtro de producto */
+}
+
+/* Ocultar los controles de fecha específicos inicialmente */
+.filters-section #fecha-especifica-Controles,
+.filters-section #mes-especifico-Controles,
+.filters-section #anio-especifico-Controles,
+.filters-section #rango-fechas-Controles {
+    display: none;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filters-section #rango-fechas-Controles label {
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.filters-section .date-filter button {
+    padding: 4px 8px; /* Reducir el padding del botón */
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.filters-section .date-filter button:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilos responsivos para pantallas más pequeñas (móviles) */
+@media (max-width: 600px) {
+    .filters-section {
+        flex-direction: column; /* Apilar los controles verticalmente */
+        align-items: stretch; /* Ocupar todo el ancho */
+    }
+
+    .filters-section .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .filters-section .date-filter,
+    .filters-section .product-filter {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 10px;
+    }
+
+    .filters-section .date-filter label,
+    .filters-section .product-filter label {
+        min-width: auto;
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+
+    .filters-section .date-filter select,
+    .filters-section .product-filter select {
+        max-width: none;
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .filters-section .date-filter button {
+        max-width: none;
+    }
+
+    .filters-section #fecha-especifica-Controles,
+    .filters-section #mes-especifico-Controles,
+    .filters-section #anio-especifico-Controles,
+    .filters-section #rango-fechas-Controles {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

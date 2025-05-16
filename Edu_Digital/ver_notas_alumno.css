@@ -1,0 +1,129 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #020529; /* Fondo oscuro consistente */
+    margin: 0;
+}
+
+.notas-container {
+    background-color: #fff; /* Recuadro blanco consistente */
+    max-width: 95%;
+    margin: 30px auto; /* Mayor margen superior e inferior */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+}
+
+.notas-title {
+    text-align: center;
+    color: #212121; /* Color de título más oscuro */
+    margin-bottom: 40px; /* Más espacio debajo del título */
+    font-size: 2.5em; /* Título más grande */
+    font-weight: 500;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc; /* Borde más estándar para la tabla */
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 650px;
+    background-color: #fff; /* Asegurar fondo blanco de la tabla */
+}
+
+.notas-table th {
+    background-color: #f5f5f5; /* Fondo claro para los encabezados */
+    color: #333; /* Texto oscuro para los encabezados */
+    padding: 14px 16px; /* Más padding */
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 2px solid #ddd;
+}
+
+.notas-table td {
+    border-bottom: 1px solid #eee;
+    padding: 12px 16px;
+    text-align: center;
+    color: #555;
+}
+
+.notas-table tr:last-child td {
+    border-bottom: none;
+}
+
+.nota-input {
+    width: 80px; /* Ligeramente más ancho */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.nota-input:focus {
+    border-color: #1976d2; /* Azul primario para el foco */
+    outline: none;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.25);
+}
+
+.promedio-cell {
+    font-weight: bold; /* Resaltar más el promedio */
+    color: #2e7d32; /* Verde oscuro para el promedio */
+}
+
+.buttons-container {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Centrar los botones horizontalmente */
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.guardar-notas-btn, .regresar-panel-btn {
+    display: inline-block;
+    padding: 14px 28px; /* Más padding en los botones */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+}
+
+.guardar-notas-btn {
+    background-color: #1976d2; /* Azul primario para guardar */
+}
+
+.regresar-panel-btn {
+    background-color: #6c757d; /* Gris para regresar */
+}
+
+.guardar-notas-btn:hover {
+    background-color: #1565c0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.regresar-panel-btn:hover {
+    background-color: #545b62;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.loading-row td {
+    text-align: center;
+    font-style: italic;
+    color: #718096;
+    padding: 15px;
+}

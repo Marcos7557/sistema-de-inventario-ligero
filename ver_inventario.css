@@ -1,0 +1,119 @@
+/* ver_inventario.css */
+
+/* Puedes agregar estilos específicos para la página de ver inventario aquí */
+
+#inventory-list {
+    margin-top: 0; /* Ajustado para el nuevo contenedor */
+    color: black;
+}
+
+/* Estilos básicos para la tabla */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0; /* Ajustado para el nuevo contenedor */
+    background-color: transparent; /* El fondo ahora está en el contenedor de la sección */
+    border-radius: 0; /* Los bordes ahora están en el contenedor de la sección */
+    box-shadow: none; /* La sombra ahora está en el contenedor de la sección */
+    min-width: 600px; /* Para forzar el desplazamiento horizontal */
+}
+
+.inventory-table th, .inventory-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.inventory-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: black;
+}
+
+.inventory-table .out-of-stock td {
+    background-color: #ffe0e0;
+    color: #8b0000;
+}
+
+/* Estilos para el contenedor de la sección de inventario */
+.inventory-section {
+    margin-top: 20px;
+    color: black;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente los elementos dentro */
+    overflow: auto; /* Para el desplazamiento general si la sección es muy alta */
+}
+
+/* Estilos para el título */
+.inventory-section h2 {
+    text-align: center; /* Centrar el texto del título */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    background-color: transparent; /* Fondo transparente para el título */
+    border-radius: 0;
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+    width: 100%; /* Ocupar todo el ancho para centrar el texto */
+}
+
+/* Estilos para el contenedor de la tabla (permite el desplazamiento horizontal) */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+.app-header {
+    /* ... otros estilos del header ... */
+    flex-direction: column; /* Volver a alinear los elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+}
+
+.app-title {
+    /* ... otros estilos del título ... */
+    margin-bottom: 10px; /* Agregar un poco de espacio entre el título y los botones */
+}
+
+.back-button, .print-button {
+    background-color: #dc3545; /* Color rojo para el botón "Volver" */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 5px 10px; /* Reducir un poco el margen vertical y mantener el horizontal */
+}
+
+.back-button:hover, .print-button:hover {
+    opacity: 0.8; /* Ligeramente más oscuro al pasar el ratón */
+}
+
+.print-button {
+    background-color: #28a745; /* Color verde para el botón "Imprimir" */
+}
+
+.print-button:hover {
+    background-color: #1e7e34; /* Un tono de verde más oscuro al pasar el ratón */
+}
+
+/* Contenedor para centrar los botones */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centrar los botones horizontalmente dentro del contenedor */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px; /* Espacio entre el título y los botones */
+    width: 100%; /* Ocupar todo el ancho del header para centrar */
+}
+@media print {
+    .app-header {
+        display: none !important;
+    }
+}

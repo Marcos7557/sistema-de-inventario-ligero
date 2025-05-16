@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Mensaje General</title>
+    <link rel="stylesheet" href="enviar_mensaje_general.css">
+</head>
+<body>
+    <div class="mensaje-form">
+        <h2>Enviar Mensaje General</h2>
+        <form>
+            <div class="form-group">
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <div class="buttons-container">
+                <button type="submit" class="enviar-btn">Enviar Mensaje</button>
+                <a href="maestro.html" class="regresar-panel-btn">Regresar al Panel</a>
+            </div>
+            <div id="mensaje-resultado" class=""></div>
+        </form>
+    </div>
+</body>
+</html>

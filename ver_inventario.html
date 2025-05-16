@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Inventario</title>
+    <link rel="stylesheet" href="inventario.css">
+    <link rel="stylesheet" href="ver_inventario.css">
+    <script type="module" src="./firebase-config.js"></script>
+    <script type="module" src="ver_inventario.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <img src="../IMG/logo-superior.jpeg" alt="Logo Superior" class="header-logo">
+        <div class="app-title">Ver Inventario</div>
+        <button onclick="window.location.href='inventario.html'" class="back-button logout-button">Volver</button>
+        <button onclick="window.print()" class="print-button">Imprimir Inventario</button>
+    </header>
+    <main class="app-content">
+        <section class="inventory-section">
+            <h2>Inventario de Productos</h2>
+            <div class="table-container">
+                <div id="inventory-list">
+                    <p>Cargando inventario...</p>
+                </div>
+            </div>
+            <button id="eliminarProductoTopBtn" class="action-button">Eliminar Producto</button>
+        </section>
+    </main>
+</body>
+</html>

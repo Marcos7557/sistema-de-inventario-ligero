@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Virtual</title>
+    <link rel="stylesheet" href="foro_virtual.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Foro Virtual</h1>
+
+        <div id="foros-lista">
+            <h2>Foros Disponibles</h2>
+            <p>Cargando foros...</p>
+        </div>
+
+        <div id="crear-foro-seccion" style="display:none;">
+            <h2>Crear Nuevo Foro</h2>
+            <form id="crear-foro-form">
+                <div>
+                    <label for="nombre-foro">Nombre del Foro:</label>
+                    <input type="text" id="nombre-foro" required>
+                </div>
+                <div>
+                    <label for="descripcion-foro">Descripción (Opcional):</label>
+                    <textarea id="descripcion-foro"></textarea>
+                </div>
+                <button type="submit">Crear Foro</button>
+            </form>
+        </div>
+
+        <button id="regresar-panel-maestro">Regresar al Panel</button>
+    </div>
+
+    <script type="module" src="foro_virtual.js"></script>
+</body>
+</html>
