@@ -1,7 +1,7 @@
 /* Estilos generales para el body y el contenedor */
 body {
     font-family: sans-serif;
-    background-image: url('../IMG/background.jpg'); /* Ruta correcta a la imagen */
+    background-image: url('./IMG/background.jpg'); /* Ruta correcta a la imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
