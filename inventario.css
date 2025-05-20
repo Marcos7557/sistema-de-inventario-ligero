@@ -2,7 +2,7 @@
 
 body {
     font-family: sans-serif;
-    background-image: url('../IMG/logo-inferior.jpeg'); /* Ruta a tu imagen de fondo */
+    background-image: url('./IMG/logo-inferior.jpeg'); /* Ruta a tu imagen de fondo */
     background-repeat: no-repeat; /* Para que la imagen no se repita */
     background-size: cover; /* Para que la imagen cubra toda la pantalla */
     background-position: center center; /* Para centrar la imagen */
