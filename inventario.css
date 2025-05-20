@@ -17,7 +17,7 @@ body {
 /* Estilos para el encabezado */
 .app-header {
     background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro con transparencia para ver el fondo */
-    background-image: url('../IMG/logo-superior.jpeg'); /* Ruta a tu imagen superior como fondo del header */
+    background-image: url('./IMG/logo-superior.jpeg'); /* Ruta a tu imagen superior como fondo del header */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
