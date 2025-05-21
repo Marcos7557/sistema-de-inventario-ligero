@@ -114,3 +114,99 @@
     flex-grow: 1; /* Para que el input ocupe el resto del espacio */
     outline: none; /* Opcional: para quitar el borde al enfocar */
 }
+/* INICIO: Estilos para el Modal (Ventana Emergente) - Añadido para la función "Código Existente" */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posicionamiento fijo para que cubra toda la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Cubre todo el ancho */
+    height: 100%; /* Cubre toda la altura */
+    overflow: auto; /* Habilitar scroll si el contenido es demasiado grande */
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente oscuro */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+    background-color: #333; /* Fondo oscuro similar a tu tema */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del contenido del modal */
+    max-width: 500px; /* Ancho máximo para que no sea demasiado grande en pantallas grandes */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop; /* Animación de aparición */
+    animation-duration: 0.4s;
+    border-radius: 8px; /* Bordes redondeados */
+    color: white; /* Color de texto para el modal */
+    display: flex; /* Para organizar los elementos internos (label, input, button) */
+    flex-direction: column; /* Apilarlos verticalmente */
+    gap: 15px; /* Espacio entre los elementos del formulario */
+}
+
+/* Animación para que el modal aparezca suavemente */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end; /* Alinea la 'x' a la derecha superior dentro del modal-content */
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para los inputs dentro del modal */
+.modal-content input[type="text"],
+.modal-content input[type="number"] {
+    width: calc(100% - 20px); /* Ajusta el ancho, restando el padding si lo hubiera */
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: white;
+    border-radius: 4px;
+    font-size: 1em; /* Asegura un tamaño de fuente legible */
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff; /* Borde al enfocar */
+}
+
+/* Estilo para el botón de acción dentro del modal */
+.modal-content .action-button {
+    width: 100%; /* Que ocupe todo el ancho del modal-content */
+    padding: 10px;
+    background-color: #007bff; /* Color azul, puedes ajustarlo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Un poco de espacio arriba */
+}
+
+.modal-content .action-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el nuevo botón "Código Existente" (que tiene la clase secondary-button) */
+.secondary-button {
+    background-color: #6c757d; /* Un color gris/secundario para distinguirlo del principal */
+}
+
+.secondary-button:hover {
+    background-color: #5a6268;
+}
+/* FIN: Estilos para el Modal (Ventana Emergente) */

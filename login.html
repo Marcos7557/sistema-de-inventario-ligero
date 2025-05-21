@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario Ligero (SIL) - Acceder</title>
+    <link rel="icon" type="image/png" href="/favicon_sil/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon_sil/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon_sil/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_sil/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon_sil/site.webmanifest" />
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <h1>Sistema de Inventario Ligero (SIL)</h1>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Usuario o Correo</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario o correo">
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="submit" class="login-button">Iniciar Sesión</button>
+            </form>
+
+            <div class="forgot-password">
+                <a href="olvide_password.html">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="register-option">
+                <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="login_nuevo.js"></script>
+</body>
+</html>

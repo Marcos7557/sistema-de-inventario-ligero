@@ -1,0 +1,247 @@
+/* Estilos generales para el body y el contenedor */
+body {
+    font-family: sans-serif;
+    background-image: url('./IMG/background.jpg'); /* Ruta correcta a la imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%; /* Ocupa un porcentaje del ancho en pantallas pequeñas */
+    max-width: 400px; /* Límite máximo en pantallas más grandes */
+    padding: 20px;
+    margin: 20px auto; /* Centrar horizontalmente con margen automático */
+}
+
+/* Estilos para la tarjeta de logueo */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.50); /* Fondo blanco con 10% de opacidad */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para los grupos de entrada (label e input) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #080808;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff; /* Un color de foco */
+}
+
+/* Estilo para el botón de inicio de sesión principal */
+.login-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Añadido margen inferior para separarlo del botón de Google */
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el separador "O" */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #0a0a0a;
+    font-weight: bold;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex-grow: 1;
+    background-color: #ddd;
+    height: 1px;
+    margin: 0 10px;
+}
+
+/* Estilos para el botón de "Continuar con Google" */
+.google-login {
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro */
+    display: flex; /* Para alinear el logo y el texto */
+    align-items: center; /* Centrar verticalmente el logo y el texto */
+    justify-content: center; /* Centrar horizontalmente el logo y el texto */
+    padding: 10px 20px; /* Ajustar el padding */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 10px; /* Espacio entre botones */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.google-login:hover {
+    background-color: #f2f2f2; /* Un ligero gris al pasar el ratón */
+    color: #222;
+}
+
+.google-login img {
+    width: 20px; /* Ajusta el tamaño del logo según necesites */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.google-login span {
+    font-weight: bold; /* Opcional: hacer el texto más fuerte */
+}
+
+/* Estilos para la opción de registro */
+.register-option {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #080808;
+    font-weight: bold;
+}
+
+.register-option a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-option a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
+
+    .login-card h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        font-size: 0.85em;
+    }
+
+    .input-group input {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .login-button {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+
+    .google-login {
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+
+    .separator {
+        margin: 15px 0;
+    }
+
+    .separator span {
+        font-size: 0.8em;
+    }
+
+    .register-option {
+        font-size: 0.85em;
+        margin-top: 15px;
+    }
+}
+
+/* Media Query para pantallas medianas (ej., tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .login-card {
+        padding: 35px;
+    }
+
+    .login-card h1 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .input-group label {
+        font-size: 0.95em;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 1.05em;
+    }
+
+    .login-button {
+        padding: 12px 20px;
+        font-size: 1.05em;
+    }
+
+    .google-login {
+        padding: 10px 20px;
+        font-size: 1.05em;
+    }
+
+    .separator {
+        margin: 25px 0;
+    }
+
+    .separator span {
+        font-size: 0.9em;
+    }
+
+    .register-option {
+        font-size: 0.9em;
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,167 @@
+/* index.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* Un color de respaldo */
+    background-image: url('./IMG/fondo-index.png'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con el nombre de tu archivo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Opcional */
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco ligeramente transparente */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section h2 {
+    color: #007bff; /* Un color primario para los títulos de sección */
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 20px;
+    font-size: 0.95em; /* Reduce ligeramente el tamaño de la fuente */
+    line-height: 1.5; /* Reduce ligeramente el espaciado entre líneas */
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em; /* Reduce ligeramente el tamaño de la fuente */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#sugerencias form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sugerencias textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.95em; /* Reduce ligeramente el tamaño de la fuente */
+}
+
+#sugerencias button[type="submit"] {
+    background-color: #28a745; /* Un color verde para el botón de enviar */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em; /* Reduce ligeramente el tamaño de la fuente */
+}
+
+#sugerencias button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em; /* Reduce ligeramente el tamaño de la fuente */
+}
+/* Estilos para las pestañas de los proyectos */
+.project-tabs {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-right: 20px; /* Agrega un poco de espacio a la derecha */
+}
+
+.tab {
+    display: block;
+    padding: 8px 12px; /* Reduce ligeramente el padding */
+    text-decoration: none;
+    color: white; /* Cambia el color a un gris más oscuro */
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    font-size: 0.9em; /* Reduce el tamaño de la fuente */
+    font-weight: bold; /* Hace la fuente más gruesa */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro ligeramente transparente para las pestañas */
+    border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
+    margin-left: 5px; /* Agrega un poco de espacio entre las pestañas */
+}
+
+.tab:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece ligeramente al pasar el ratón */
+}
+
+.tab.active {
+    color: #007bff;
+    font-weight: bold;
+    border-bottom-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro ligeramente transparente para la pestaña activa */
+}
+
+/* Estilos para la descripción del sitio */
+#descripcion-sitio {
+    text-align: center;
+    padding: 20px; /* Reduce el padding */
+    margin-bottom: 20px; /* Reduce el margen inferior */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco ligeramente transparente */
+    border-radius: 8px; /* Mantiene el radio del borde */
+}
+
+#descripcion-sitio h2 {
+    color: white;
+    margin-bottom: 10px; /* Reduce el margen inferior */
+    font-size: 1.8em; /* Reduce ligeramente el tamaño del título */
+}
+
+#descripcion-sitio p {
+    font-size: 0.95em; /* Reduce ligeramente el tamaño de la fuente */
+    line-height: 1.5; /* Reduce ligeramente el espaciado entre líneas */
+}

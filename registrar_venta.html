@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Venta</title>
+    <link rel="icon" type="image/png" href="/favicon_sil/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon_sil/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon_sil/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_sil/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon_sil/site.webmanifest" />
+    <link rel="stylesheet" href="inventario.css">
+    <link rel="stylesheet" href="registrar_venta.css">
+    <script type="module" src="./firebase-config.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-title">Registrar Venta</div>
+        <button onclick="window.location.href='inventario.html'" class="back-button logout-button">Volver</button>
+    </header>
+    <main class="app-content">
+        <section class="inventory-section">
+            <h2>Nueva Venta</h2>
+            <form id="sale-form" class="input-card">
+                <div id="sale-items">
+                    <div class="sale-item">
+                        <div class="input-group">
+                            <label for="product-code-1">Código</label>
+                            <input type="text" id="product-code-1" class="product-code-input">
+                        </div>
+                        <div class="input-group">
+                            <label for="quantity-1">Cantidad</label>
+                            <input type="number" id="quantity-1" class="quantity-input" min="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="product-name-1">Nombre</label>
+                            <input type="text" id="product-name-1" class="product-name-input" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="price-1">P/Unitario</label>
+                            <input type="number" id="price-1" class="price-input" readonly>
+                        </div>
+                        <div class="item-total">Subtotal: <span id="subtotal-1">0.00</span></div>
+                    </div>
+                </div>
+                <button type="button" id="add-item-button" class="action-button">Agregar Otro Producto</button>
+                <div class="total-section">
+                    <span class="total-label">Total:</span>
+                    <span id="total-amount" class="total-value">$0.00</span>
+                </div>
+                <button type="submit" class="action-button primary">Registrar Venta</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="registrar_venta.js"></script>
+</body>
+</html>

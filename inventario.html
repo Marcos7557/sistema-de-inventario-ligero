@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inventario Ligero (SIL)</title>
+    <link rel="icon" type="image/png" href="/favicon_sil/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon_sil/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon_sil/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_sil/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon_sil/site.webmanifest" />
+    <link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-title">Sistema de Inventario Ligero (SIL)</div>
+        <button id="logout-button" class="logout-button">Cerrar Sesión</button>
+    </header>
+    <main class="app-content">
+        <div class="dashboard-buttons">
+            <button onclick="window.location.href='registrar_producto.html'" class="action-button">Registrar Nuevo Producto</button>
+            <button onclick="window.location.href='ver_inventario.html'" class="action-button">Ver Inventario</button>
+            <button onclick="window.location.href='historial_ventas.html'" class="action-button">Historial de Ventas</button>
+            <button onclick="window.location.href='registrar_venta.html'" class="action-button">Registrar Venta</button>
+        </div>
+    </main>
+    <script type="module" src="inventario.js"></script>
+</body>
+</html>
