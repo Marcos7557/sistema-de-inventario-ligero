@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!productName) {
             return '';
         }
-        const firstThreeLetters = productName.substring(0, 3).toUpperCase();
+        const textoNormalizado = productName.normalize("NFD"); // <-- NUEVA LÍNEA
+const textoSinTildes = textoNormalizado.replace(/[\u0300-\u036f]/g, ""); // <-- NUEVA LÍNEA
+const firstThreeLetters = textoSinTildes.substring(0, 3).toUpperCase(); // <-- LÍNEA MODIFICADA
         const randomNumber = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
         return `${firstThreeLetters}${randomNumber}`;
     };
