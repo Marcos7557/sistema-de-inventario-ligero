@@ -1,11 +1,11 @@
 import { initializeApp } from './firebase-config.js';
 import { getFirestore, collection, doc, getDoc, addDoc, updateDoc, query, where, getDocs } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
-import { getAuth } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js'; // Importa getAuth
 import { firebaseConfig } from './firebase-config.js';
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const auth = getAuth();
+const auth = getAuth(); // Inicializa getAuth
 const productosCollection = collection(db, 'productos');
 const salesCollection = collection(db, 'ventas');
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const querySnapshot = await getDocs(q);
         if (!querySnapshot.empty) {
             const producto = querySnapshot.docs[0].data();
-            return { ...producto, id: querySnapshot.docs[0].id };
+            return { ...producto, id: querySnapshot.docs[0].id }; // Retornamos también el ID del documento
         } else {
             return null;
         }
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (quantityInput.value === '1' || quantityInput.value === '') {
                             quantityInput.value = 1;
                         }
-                        // La línea de cálculo se ha eliminado de aquí
+                        subtotalElement.textContent = (parseFloat(priceInput.value) * parseInt(quantityInput.value)).toFixed(2);
                         actualizarTotal();
                         validarStock(quantityInput, producto);
                     } else {
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const codigoProducto = productCodeInput.value.trim();
                 const precioInput = item.querySelector('.price-input');
                 const subtotalElement = item.querySelector('.item-total span');
-                const precio = parseFloat(precioInput.value) || 0;
+                const precio = parseFloat(priceInput.value) || 0;
                 subtotalElement.textContent = (precio * cantidadVendida).toFixed(2);
                 actualizarTotal();
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (quantityInput.value === '1' || quantityInput.value === '') {
                         quantityInput.value = 1;
                     }
-                    // La línea de cálculo se ha eliminado de aquí
+                    subtotalElement.textContent = (parseFloat(priceInput.value) * parseInt(quantityInput.value)).toFixed(2);
                     actualizarTotal();
                     validarStock(quantityInput, producto);
                 } else {
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    actualizarTotal();
+    actualizarTotal(); // Llamar al inicio para calcular el total inicial (si hay valores predefinidos)
 
     if (saleForm) {
         saleForm.addEventListener('submit', async (event) => {
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemsVendidos = [];
             let totalVenta = 0;
             const currentUser = auth.currentUser;
-            let stockValido = true;
+            let stockValido = true; // Variable para rastrear si el stock es válido para todos los items
 
             if (currentUser) {
                 for (const item of saleItems) {
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (cantidad > (productoInfo.cantidad || 0)) {
                                 alert(`No hay suficiente stock para el producto "${nombre}" (código: ${codigo}). Stock disponible: ${productoInfo.cantidad || 0}`);
                                 stockValido = false;
-                                return;
+                                return; // Detener el registro de la venta si hay stock inválido
                             }
                             itemsVendidos.push({
                                 codigo: codigo,
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (stockValido && itemsVendidos.length > 0) {
                     try {
                         const ventaRef = await addDoc(salesCollection, {
-                            uid_usuario: currentUser.uid,
+                            uid_usuario: currentUser.uid, // Asocia el UID del usuario a la venta
                             fecha: new Date(),
                             items: itemsVendidos,
                             total: totalVenta
@@ -308,8 +308,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
 
                         saleForm.reset();
-                        actualizarTotal();
-                        itemCount = 1;
+                        actualizarTotal(); // Reiniciar el total visualmente
+                        itemCount = 1; // Reiniciar el contador de items
+                        // Limpiar todos los items excepto el primero
                         while (saleItemsDiv.children.length > 1) {
                             saleItemsDiv.removeChild(saleItemsDiv.lastChild);
                         }
@@ -326,8 +327,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert('No hay productos para registrar en la venta.');
                 }
             } else {
-                alert('Usuario no autenticado. No se puede registrar la venta.');
+                alert('Usuario no registrado. No se puede registrar la venta.');
             }
         });
     }
-});
+});// Cambio para forzar la actualizacion.

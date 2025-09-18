@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Personalizado</title>
+    <link rel="stylesheet" href="chat_personalizado.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="nombre-alumno-chat">Chat con alumno</h1>
+        <div class="regresar-panel-container">
+            <button class="regresar-panel-btn" onclick="window.location.href='enviar_mensaje_personalizado.html'">Regresar a la Lista</button>
+        </div>
+        <div id="mensajes-container">
+            <p>Cargando mensajes...</p>
+        </div>
+        <div class="respuesta-container">
+            <input type="text" id="respuesta-input" class="respuesta-input" placeholder="Escribe tu mensaje...">
+            <button class="enviar-respuesta-btn" onclick="window.enviarMensajePersonal()">Enviar</button>
+        </div>
+    </div>
+
+    <script type="module" src="chat_personalizado.js"></script>
+</body>
+</html>

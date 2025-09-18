@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Foro</title>
+    <link rel="stylesheet" href="foro_detalle.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="foro-titulo">Cargando título...</h1>
+
+        <div id="mensajes-container">
+            <p>Cargando mensajes...</p>
+        </div>
+
+        <div id="nuevo-mensaje-container">
+            <h2>Nuevo Mensaje</h2>
+            <form id="nuevo-mensaje-form">
+                <div>
+                    <label for="mensaje-texto">Mensaje:</label>
+                    <textarea id="mensaje-texto" required></textarea>
+                </div>
+                <div>
+                    <label for="archivo-adjunto">Adjuntar Archivo (Opcional):</label>
+                    <input type="file" id="archivo-adjunto">
+                </div>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <div class="regresar-foro-container">
+            <button class="regresar-foro-btn" onclick="window.location.href='foro_virtual.html'">Regresar al Foro</button>
+        </div>
+    </div>
+
+    <script type="module" src="foro_detalle.js"></script>
+</body>
+</html>

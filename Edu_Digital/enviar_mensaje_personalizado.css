@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #020529; /* Fondo azul oscuro */
+    margin: 0;
+    padding: 20px; /* Agregar un poco de padding al body para márgenes en pantallas pequeñas */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box; /* Importante para que padding no aumente el ancho total */
+}
+
+.container {
+    background-color: #f9fbe7; /* Amarillo claro para el recuadro */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 95%; /* Ocupa la mayoría del ancho en pantallas pequeñas */
+    max-width: 500px; /* Ancho máximo en pantallas más grandes */
+    padding: 20px;
+    box-sizing: border-box; /* Importante para que padding no aumente el ancho total */
+}
+
+h1 {
+    background-color: #e0e0e0; /* Fondo gris para el título */
+    color: #212121; /* Texto oscuro para el título */
+    padding: 10px;
+    font-size: 2em;
+    font-weight: 500;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#lista-alumnos {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-alumnos li {
+    background-color: #e0e0e0;
+    color: #212121;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* Para posicionar el indicador de mensajes */
+}
+
+#lista-alumnos li:hover {
+    background-color: #d4d4d4;
+}
+
+#lista-alumnos li a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Para que el enlace ocupe todo el LI */
+}
+
+.regresar-panel-btn {
+    padding: 10px 15px;
+    background-color: #81d4fa; /* Celeste claro para el botón */
+    color: #212121;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Para quitar el subrayado si lo usas como link */
+    margin-top: 20px;
+    width: 100%; /* Hacer que el botón ocupe todo el ancho del contenedor en pantallas pequeñas */
+    max-width: 200px; /* Ancho máximo para el botón */
+}
+
+.regresar-panel-btn:hover {
+    background-color: #4fc3f7; /* Celeste ligeramente más oscuro al pasar el mouse */
+}
+
+/* Estilos para el indicador de nuevos mensajes */
+.nuevo-mensaje-indicator {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

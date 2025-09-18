@@ -1,0 +1,158 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #020529; /* Fondo azul oscuro */
+    color: #fff; /* Texto blanco */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #f9fbe7; /* Fondo amarillo claro para el contenedor */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1 {
+    color: #311b92; /* Morado oscuro para el título */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mensajes-container {
+    background-color: #e0f2f7; /* Celeste claro para el contenedor de mensajes */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+    color: #212121; /* Texto oscuro para los mensajes */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mensaje {
+    background-color: #f0f0f0; /* Fondo gris claro para los mensajes */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+}
+
+.mensaje-propio {
+    align-self: flex-end;
+    background-color: #DCF8C6; /* Verde claro para los mensajes propios */
+}
+
+.mensaje strong {
+    color: #0277bd; /* Azul oscuro para el nombre del autor */
+}
+
+.mensaje small {
+    color: #757575; /* Gris para la fecha y hora */
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+#nuevo-mensaje-container {
+    padding: 20px;
+    background-color: #f0f0f0; /* Fondo gris claro para el formulario */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#nuevo-mensaje-container h2 {
+    color: #311b92; /* Morado oscuro para el título del formulario */
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#nuevo-mensaje-form div {
+    margin-bottom: 15px;
+}
+
+#nuevo-mensaje-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#nuevo-mensaje-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-height: 80px;
+}
+
+#nuevo-mensaje-form input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#nuevo-mensaje-form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Verde para el botón de enviar */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#nuevo-mensaje-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.regresar-foro-container {
+    text-align: right;
+}
+
+.regresar-foro-btn {
+    padding: 8px 15px;
+    background-color: #81d4fa; /* Azul claro para el botón de regresar */
+    color: #212121;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.regresar-foro-btn:hover {
+    background-color: #4fc3f7;
+}
+
+.mensaje img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.mensaje a {
+    color: #0277bd; /* Azul oscuro para los enlaces */
+    text-decoration: none;
+}
+
+.mensaje a:hover {
+    text-decoration: underline;
+}

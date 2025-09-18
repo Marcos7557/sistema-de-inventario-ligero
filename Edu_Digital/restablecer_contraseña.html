@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña</title>
+    <link rel="stylesheet" href="restablecer_contraseña.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script type="module" src="restablecer_contraseña.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Restablecer Contraseña</h1>
+        <div id="resetPasswordMessage" class="error-message"></div>
+        <div class="password-form">
+            <div class="form-group">
+                <label for="newPassword">Nueva Contraseña:</label>
+                <input type="password" id="newPassword" class="login-input" placeholder="Nueva Contraseña" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmNewPassword">Confirmar Nueva Contraseña:</label>
+                <input type="password" id="confirmNewPassword" class="login-input" placeholder="Confirmar Nueva Contraseña" required>
+            </div>
+            <button type="button" class="reset-button" id="resetPasswordButton">Restablecer Contraseña</button>
+        </div>
+        <p class="back-to-login"><a href="index.html" id="backToLogin">Volver a Iniciar Sesión</a></p>
+    </div>
+</body>
+</html>

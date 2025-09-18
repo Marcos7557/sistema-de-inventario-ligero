@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Notas</title>
+    <link rel="stylesheet" href="ver_notas_alumno.css">
+</head>
+<body>
+    <div class="notas-container">
+        <h1 class="notas-title">Gestión de Calificaciones</h1>
+        <div class="table-responsive">
+            <table class="notas-table">
+                <thead>
+                    <tr>
+                        <th>NOMBRE DEL ALUMNO</th>
+                        <th>Primer Bimestre</th>
+                        <th>Segundo Bimestre</th>
+                        <th>Tercer Bimestre</th>
+                        <th>Cuarto Bimestre</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody id="notas-table-body">
+                    </tbody>
+            </table>
+        </div>
+        <div class="buttons-container">
+            <button id="guardar-notas-general-btn" class="guardar-notas-btn">Guardar Notas</button>
+            <button class="regresar-panel-btn" onclick="window.location.href='maestro.html'">Regresar al Panel</button>
+        </div>
+    </div>
+    <script type="module" src="ver_notas_alumno.js"></script>
+</body>
+</html>

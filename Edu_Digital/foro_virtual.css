@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Asegúrate de tener esta fuente o una similar */
+    background-color: #020529; /* Fondo azul oscuro */
+    color: #fff; /* Texto blanco */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #f9fbe7; /* Fondo amarillo claro para el contenedor */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column; /* Para alinear el botón debajo de la sección de crear foro */
+    align-items: stretch; /* Para que el botón ocupe el ancho completo */
+}
+
+h1, h2 {
+    color: #311b92; /* Morado oscuro para los títulos */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#foros-lista p {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+.foro-item {
+    background-color: #e0f2f7; /* Celeste claro para cada foro */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #b2ebf2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foro-info {
+    flex-grow: 1;
+}
+
+.foro-info h3 {
+    color: #0277bd; /* Azul oscuro para el nombre del foro */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.foro-info p {
+    color: #212121;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.foro-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #4CAF50; /* Verde para el enlace */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.foro-link:hover {
+    background-color: #45a049;
+}
+
+#crear-foro-seccion {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    color: #333;
+    margin-bottom: 20px; /* Agregar margen inferior para separar del botón */
+}
+
+#crear-foro-seccion h2 {
+    color: #311b92;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+#crear-foro-form div {
+    margin-bottom: 10px;
+}
+
+#crear-foro-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#crear-foro-form input[type="text"],
+#crear-foro-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#crear-foro-form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #0277bd; /* Azul para el botón de crear foro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#crear-foro-form button[type="submit"]:hover {
+    background-color: #01579b;
+}
+
+#regresar-panel-maestro {
+    padding: 10px 15px;
+    background-color: #f44336; /* Rojo para el botón de regresar */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Por si acaso se usa como enlace */
+    text-align: center; /* Asegurar que el texto esté centrado */
+}
+
+#regresar-panel-maestro:hover {
+    background-color: #d32f2f;
+}

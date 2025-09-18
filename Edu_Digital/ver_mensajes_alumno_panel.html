@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Mensajes</title>
+    <link rel="stylesheet" href="ver_mensajes_alumno_panel.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="chat-title">Mis Mensajes</h1>
+        <div class="regresar-panel-container">
+            <button class="regresar-panel-btn" onclick="window.location.href='alumno_panel.html'">Regresar</button>
+        </div>
+        <div id="mensajes-container">
+            <p>Cargando mensajes...</p>
+        </div>
+        <div class="respuesta-container">
+            <input type="text" id="respuesta-input" class="respuesta-input" placeholder="Escribe tu mensaje...">
+            <button class="enviar-respuesta-btn" onclick="window.enviarMensaje()">Enviar</button>
+        </div>
+    </div>
+    <script type="module" src="ver_mensajes_alumno_panel.js"></script>
+</body>
+</html>

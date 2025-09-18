@@ -1,0 +1,95 @@
+/* Estilos generales para la página de registro de profesor (fondo y centrado) */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #020529; /* Fondo oscuro */
+    margin: 0;
+}
+
+/* Estilos específicos para el contenedor del formulario de registro */
+.registration-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    text-align: left; /* Alineamos el texto a la izquierda dentro del formulario */
+    width: 400px;
+}
+
+.registration-container h1 {
+    color: #212121;
+    margin-bottom: 30px;
+    font-size: 32px; /* Título un poco más grande */
+    font-weight: 500;
+    text-align: center; /* Centramos el título del formulario */
+}
+
+.registration-form .form-group {
+    margin-bottom: 25px; /* Más espacio entre los campos */
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 10px; /* Más espacio debajo de la etiqueta */
+    font-weight: 500;
+    color: #424242;
+    font-size: 16px; /* Tamaño de fuente de la etiqueta */
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"], /* Añadido el tipo password */
+.registration-form input[type="tel"],    /* Añadido el tipo tel */
+.registration-form input[type="text"],
+.registration-form select {
+    width: calc(100% - 20px); /* Ajustamos el cálculo del ancho por el padding y el borde */
+    padding: 12px; /* Más espacio dentro de los campos */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Bordes más redondeados para los campos */
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 5px; /* Reducimos un poco el espacio debajo del input */
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="password"]:focus, /* Añadido el tipo password */
+.registration-form input[type="tel"]:focus,    /* Añadido el tipo tel */
+.registration-form input[type="text"]:focus,
+.registration-form select:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 8px rgba(25, 118, 210, 0.3); /* Sombra más suave al enfocar */
+}
+
+.registration-form button[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    padding: 14px 28px; /* Botón un poco más grande */
+    border: none;
+    border-radius: 6px; /* Bordes redondeados del botón */
+    cursor: pointer;
+    font-size: 18px; /* Fuente del botón un poco más grande */
+    font-weight: 500;
+    width: 100%;
+    margin-top: 20px; /* Más espacio arriba del botón */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: #1b5e20;
+}
+
+.registration-container .login-link {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #757575;
+    text-align: center;
+}
+
+.registration-container .login-link a {
+    font-weight: 600; /* Enlace de inicio de sesión un poco más destacado */
+}

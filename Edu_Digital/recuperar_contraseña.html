@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="recuperar_contraseña.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script type="module" src="recuperar_contraseña.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Recuperar Contraseña</h1>
+        <div class="form-group">
+            <input type="email" id="resetEmail" class="login-input" placeholder="Correo Electrónico:" required>
+        </div>
+        <button type="button" class="login-button" id="sendResetEmail">Enviar Correo de Restablecimiento</button>
+        <button type="button" class="login-button" id="backToLogin">Volver a Iniciar Sesión</button>
+        <div id="resetPasswordMessage" class="error-message"></div>
+    </div>
+</body>
+</html>
