@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert('No hay productos para registrar en la venta.');
                 }
             } else {
-                alert('Usuario no autenticado. No se puede registrar la venta.');
+                alert('Usuario no registrado. No se puede registrar la venta.');
             }
         });
     }
